@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMshots Submit Your Photo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"> 
+                    <img src="CAMshot_logo.png" alt="CAMshots Logo">
+                  </a>
+                <h1>CAMshots</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="submit-photo">
+                <h2>Submit Your Photo</h2>
+                <form action="submit_photo_handler.php" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Photo Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="child">Child Photos</option>
+                            <option value="flower">Flower Photos</option>
+                            <option value="scenic">Scenic Photos</option>
+                            <option value="animal">Animal Photos</option>
+                            <option value="nighttime">Nighttime Photos</option>
+                            <option value="sports">Sports Photos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Upload Photo (JPEG only):</label>
+                        <input type="file" id="photo" name="photo" accept=".jpg, .jpeg" required>
+                    </div>
+                    <a href="thank_you.html">
+                        <button type="button">Submit Photo</button>
+                      </a>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CAMshots. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
